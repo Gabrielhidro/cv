@@ -102,7 +102,7 @@ export const PERSONAL_INFO = {
   company: "Woli Labs",
   bio: "Desenvolvedor Front-End especializado em React.js, TypeScript e Next.js. Apaixonado por criar experiências digitais incríveis e ajudar pessoas através da tecnologia.",
   description: [
-    "Sou apaixonado por ajudar pessoas através da performance digital. Com mais de 3 anos de experiência, trabalho em colaboração com equipes multidisciplinares para entregar soluções robustas, escaláveis e alinhadas com as necessidades do usuário e os objetivos do negócio.",
+    "Sou apaixonado por ajudar pessoas através da performance digital. Com mais de 4 anos de experiência, trabalho em colaboração com equipes multidisciplinares para entregar soluções robustas, escaláveis e alinhadas com as necessidades do usuário e os objetivos do negócio.",
     "Todos os dias me desafio para me tornar um desenvolvedor melhor, buscando sempre as melhores práticas e tecnologias mais modernas do mercado.",
   ],
   education: "Análise e Desenvolvimento de Sistemas",

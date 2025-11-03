@@ -2,6 +2,7 @@ import { Menu, X } from "lucide-react";
 import type { NavigationSection } from "../../types";
 import { NAVIGATION_SECTIONS } from "../../constants/navigation";
 import { GradientText } from "./GradientText";
+import { ThemeToggle } from "./ThemeToggle";
 
 interface NavigationProps {
   isMenuOpen: boolean;
@@ -31,7 +32,7 @@ export const Navigation = ({
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {NAVIGATION_SECTIONS.map((section) => (
               <button
                 key={section}
@@ -46,10 +47,12 @@ export const Navigation = ({
                 {section}
               </button>
             ))}
+            <ThemeToggle />
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Mobile menu button & Theme Toggle */}
+          <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle />
             <button
               onClick={onToggleMenu}
               className="text-gray-300 hover:text-accent transition-colors p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-dark"

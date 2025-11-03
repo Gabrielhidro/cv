@@ -1,5 +1,6 @@
 import { useIntersectionObserver } from "./hooks/useIntersectionObserver";
 import { useNavigation } from "./hooks/useNavigation";
+import { ThemeProvider } from "./contexts/ThemeContext";
 import { Navigation } from "./components/common/Navigation";
 import { ErrorBoundary } from "./components/common/ErrorBoundary";
 import { Footer } from "./components/common/Footer";
@@ -15,7 +16,7 @@ function AppContent() {
   const visibleSections = useIntersectionObserver();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-dark via-dark-alt to-dark text-white">
+    <div className="min-h-screen bg-theme-primary text-theme-primary transition-colors duration-300">
       <Navigation
         isMenuOpen={isMenuOpen}
         activeSection={activeSection}
@@ -48,7 +49,9 @@ function AppContent() {
 export default function App() {
   return (
     <ErrorBoundary>
-      <AppContent />
+      <ThemeProvider>
+        <AppContent />
+      </ThemeProvider>
     </ErrorBoundary>
   );
 }

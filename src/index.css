@@ -1,12 +1,20 @@
 @import "tailwindcss";
 
 @theme {
+  /* Brand Colors */
   --color-primary: #67159C;
   --color-secondary: #E82D92;
   --color-accent: #07D962;
+
+  /* Dark Theme Colors */
   --color-dark: #19181F;
   --color-dark-alt: #1E1E26;
 
+  /* Light Theme Colors */
+  --color-light: #F8F9FA;
+  --color-light-alt: #FFFFFF;
+
+  /* Fonts */
   --font-sans: Inter, system-ui, sans-serif;
 }
 
@@ -15,8 +23,58 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
   margin: 0;
+}
+
+/* ============================================
+   DARK THEME (Default)
+   ============================================ */
+.dark {
+  --bg-primary: var(--color-dark);
+  --bg-secondary: var(--color-dark-alt);
+  --text-primary: #FFFFFF;
+  --text-secondary: #D1D5DB;
+  --text-tertiary: #9CA3AF;
+  --border-color: rgba(103, 21, 156, 0.2);
+}
+
+/* ============================================
+   LIGHT THEME
+   ============================================ */
+.light {
+  --bg-primary: var(--color-light);
+  --bg-secondary: var(--color-light-alt);
+  --text-primary: #1F2937;
+  --text-secondary: #4B5563;
+  --text-tertiary: #6B7280;
+  --border-color: rgba(103, 21, 156, 0.15);
+}
+
+/* Apply theme colors */
+.bg-theme-primary {
+  background-color: var(--bg-primary);
+}
+
+.bg-theme-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.text-theme-primary {
+  color: var(--text-primary);
+}
+
+.text-theme-secondary {
+  color: var(--text-secondary);
+}
+
+.text-theme-tertiary {
+  color: var(--text-tertiary);
+}
+
+.border-theme {
+  border-color: var(--border-color);
 }
